@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable name="landing" type="com.example.test.mvvmsampleapp.view.ui.main.MainViewModel"/>
+    </data>
+<LinearLayout
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginRight="100dp"
+    android:layout_marginLeft="100dp"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:onClick="onPhase1Click"
+        android:layout_height="70dp"
+        android:text="@string/phase1"
+        />
+    <Button
+        android:id="@+id/button2"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:onClick="onPhase2Click"
+
+        android:text="@string/phase2"
+        />
+    <Button
+        android:id="@+id/button3"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:onClick="onPhase3Click"
+        android:text="@string/phase3"
+        />
+
+    <Button
+        android:id="@+id/btnsummary"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:onClick="onPhase3Click"
+        android:text="@string/Summary"
+        />
+</LinearLayout>
+</layout>

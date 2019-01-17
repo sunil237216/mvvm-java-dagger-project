@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="phase"  type="com.example.test.mvvmsampleapp.view.ui.main.BlankViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context="com.example.test.mvvmsampleapp.view.ui.main.BlankFragment">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:orientation="vertical"
+     android:layout_height="wrap_content">
+
+     <TextView
+         android:id="@+id/phaseStatus"
+         android:text="@={phase.phasestatus}"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:textColor="@color/colorPrimary"
+         android:textSize="20sp"
+
+         />
+
+     <TextView
+         android:id="@+id/textphase"
+         android:text="@={phase.phaseno}"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:gravity="center"
+         android:textSize="25sp"
+         tools:text="Phase 1" />
+     <TextView
+         android:layout_width="match_parent"
+         android:id="@+id/txtcid"
+         android:layout_marginTop="10dp"
+         android:textSize="25sp"
+         android:layout_height="match_parent"
+         android:gravity="center"
+         android:text="@={phase.cid}"
+       />
+ </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+
+            <ToggleButton
+                android:id="@+id/togglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff=""
+                android:textOn=""
+                android:background="@drawable/toggletoswitch"
+                android:onClick="@{(v) -> phase.onClick(v)}"
+                />
+           <!--<Button-->
+                <!--android:id="@+id/btnok"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:text="Ok"-->
+                <!--android:onClick="@{() -> phase.onOkClick()}"-->
+                <!--android:layout_height="wrap_content" />-->
+            <!--<Button-->
+                <!--android:id="@+id/btnnotok"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:text="Not Ok"-->
+                <!--android:onClick="@{() -> phase.onNotokClick()}"-->
+                <!--android:layout_height="wrap_content" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/editremark"
+                android:text="@={phase.remark}"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btndone"
+                android:layout_width="match_parent"
+                android:text="DONE"
+                android:onClick="@{() -> phase.onDoneClick()}"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

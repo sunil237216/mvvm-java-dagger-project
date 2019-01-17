@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="scanner" type="com.example.test.mvvmsampleapp.view.ui.main.MainViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+           />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:id="@+id/txtBarcodeValue"
+            android:background="#ffffff"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_above="@id/btnAction"
+            android:layout_height="100dp" />
+
+        <Button
+            android:id="@+id/btnAction"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Confirm"
+            android:layout_alignParentBottom="true"
+             />
+
+    </RelativeLayout>
+
+</layout>
